@@ -1,0 +1,80 @@
+.toolboxContainer {
+    @apply p-5 absolute top-1/4 left-5 w-64 rounded-md;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border: 1px solid theme('colors.border1');
+    background-color: theme('colors.background1');
+    transition: box-shadow 0.3s ease; 
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+
+    .toolItem {
+        @apply mb-5;
+
+        .toolText {
+            font-size: 11px;
+            color: theme('colors.text1');
+            transition: color 0.3s ease; 
+            font-weight: bold;
+
+            &:hover {
+                color: theme('colors.text3'); 
+            }
+        }
+
+        .itemContainer {
+            @apply flex justify-between mt-2;
+
+            .colorBox {
+                @apply h-5 w-5 mr-1 rounded-2xl cursor-pointer;
+                transition: border 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover, &.active {
+                    border: 1.5px solid theme('colors.border2');
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+    .toolItem input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+      
+      .toolItem input[type="range"]:hover {
+        opacity: 1;
+      }
+      
+      .toolItem input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #900ED8;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      
+      .toolItem input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #900ED8;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    @media screen and (max-width: 640px) {
+        top: unset;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
+}
