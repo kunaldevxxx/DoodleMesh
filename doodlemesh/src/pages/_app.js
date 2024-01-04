@@ -1,6 +1,9 @@
+import { Provider } from 'react-redux'
+import { store } from '@/store'
 import '@/styles/globals.css'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
 
+export default function App({ Component, pageProps }) {
+  return <Provider store={store}>
+    <Component {...pageProps} />
+  </Provider>
 }

@@ -1,5 +1,5 @@
 .toolboxContainer {
-    @apply p-5 absolute top-1/4 left-5 w-64 rounded-md;
+    @apply p-5 absolute top-1/4 left-5 w-auto rounded-md;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     border: 1px solid theme('colors.border1');
     background-color: theme('colors.background1');
@@ -27,7 +27,7 @@
             @apply flex justify-between mt-2;
 
             .colorBox {
-                @apply h-5 w-5 mr-1 rounded-2xl cursor-pointer;
+                @apply h-5 w-5 mr-1 rounded-2xl cursor-pointer justify-between;
                 transition: border 0.3s ease, box-shadow 0.3s ease;
 
                 &:hover, &.active {
